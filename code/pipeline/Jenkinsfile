@@ -1,0 +1,65 @@
+pipeline { 
+  agent any 
+ stages { 
+    stage('Checkout Scripts') { 
+      steps { 
+        git clone git@github.com:gildmi/data477.git
+      } 
+    } 
+    stage('Setup') { 
+      steps { 
+        wget https://raw.githubusercontent.com/datasets/s-and-p-500-companies/master/data/constituents.csv
+        } 
+    } 
+    stage('Capture Data') { 
+      steps { 
+        python3 capture.py
+        } 
+    } 
+        stage('Validate Data') { 
+      steps { 
+        echo '' 
+        } 
+    } 
+    stage('Add to Data Lake') { 
+      steps { 
+        echo '' 
+        } 
+    } 
+    stage('Prep data') { 
+      steps { 
+        echo '' 
+        } 
+    }
+      stage('Run analysis') { 
+      steps { 
+        echo '' 
+        } 
+    }
+      stage('Add to data warehouse') { 
+      steps { 
+        echo '' 
+        } 
+    }
+    stage('Check reports') { 
+      steps { 
+        echo '' 
+        } 
+    }
+    stage('Retrain Models') { 
+      steps { 
+        echo '' 
+        } 
+    }
+        stage('Deploy Models') { 
+      steps { 
+        echo '' 
+        } 
+    }
+        stage('Validate Deployment') { 
+      steps { 
+        echo '' 
+        } 
+    }
+  }
+}
