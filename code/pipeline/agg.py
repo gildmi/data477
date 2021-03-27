@@ -38,7 +38,7 @@ db = pymongo.MongoClient(
 
 # Get last year
 today = datetime.today()
-last_year = today - timedelta(days=200)
+last_year = today - timedelta(days=365)
 last_year_list = pd.date_range(last_year, today).strftime("%Y-%m-%d").to_list()
 
 for r in sp500_list:

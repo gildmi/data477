@@ -17,6 +17,8 @@ python3 etl.py
 python3 agg.py
 
 # RUN STATISTICS
+
+# FEATURE ENGINEER
 # TRAIN MODELS
 # TEST MODELS
 # DEPLOY MODELS

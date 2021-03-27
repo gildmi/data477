@@ -16,9 +16,10 @@ RUN  \
         yfinance \
         pymongo \
         dnspython \
-        requests
+        requests \
+        ta
 
 COPY . /example
 
-ENTRYPOINT [ "/bin/bash" ]
-CMD [ "pipeline.sh" ]
+#ENTRYPOINT [ "/bin/bash" ]
+#CMD [ "pipeline.sh" ]
