@@ -1,0 +1,7 @@
+numpy
+requests
+pandas
+pymongo
+yfinance
+dnspython
+ta
